@@ -1,0 +1,71 @@
+:root {
+	--white: #fff;
+	--black: #000;
+	--black-333: #333;
+	--bg-gray: #eef0f1;
+	--bg-footer: #d2d6db;
+
+	--devto-brand: #3b49df;
+	--devto-brand-darker: #323ebe;
+	--devto-brand-lighter: #4150f5;
+}
+
+html,
+body {
+	background-color: var(--bg-gray);
+	font-size: 16px;
+	color: var(--font-color);
+}
+
+a {
+	transition: 0.1s all;
+	color: var(--devto-brand);
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--devto-brand-darker);
+}
+
+.btn-primary {
+	background-color: var(--devto-brand);
+	border-color: var(--devto-brand-darker);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: var(--devto-brand-darker);
+}
+
+.btn-link {
+	color: var(--devto-brand);
+}
+
+.btn-link:hover,
+.btn-link:focus {
+	color: var(--devto-brand-darker);
+}
+
+.font-bold {
+	font-weight: 600;
+}
+
+.nav-tabs__post .btn.btn-link {
+	border-bottom: 3px solid transparent;
+	border-radius: 0.3rem !important;
+	text-decoration: none;
+	color: var(--black-333);
+}
+
+.nav-tabs__post .btn + .btn {
+	margin-left: 5px;
+}
+
+.nav-tabs__post .btn.btn-link.active,
+.nav-tabs__post .btn.btn-link:hover,
+.nav-tabs__post .btn.btn-link:focus {
+	background-color: var(--bg-footer);
+	border-bottom: 3px solid var(--devto-brand-darker);
+	color: var(--devto-brand-darker);
+}

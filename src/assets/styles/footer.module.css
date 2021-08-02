@@ -1,0 +1,17 @@
+.wrapper {
+	padding: 4rem 0;
+	background-color: var(--bg-footer);
+}
+.wrapper p {
+	margin: 0 0 5px;
+	text-align: center;
+	font-size: 0.9rem;
+	color: #64707d;
+}
+.wrapper p:last-child {
+	margin-bottom: 0;
+}
+
+.wrapper p strong {
+	color: #202428;
+}

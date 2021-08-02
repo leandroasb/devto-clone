@@ -1,0 +1,77 @@
+.card {
+	overflow: hidden;
+	margin-bottom: 1rem;
+	padding: 1.3rem;
+	background-color: var(--white);
+	border-radius: 0.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.card header {
+	margin: -1.3rem;
+	margin-bottom: 1rem;
+	padding: 0.7rem 1.3rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.card footer {
+	margin: -1.3rem;
+	margin-top: 1rem;
+	padding: 0.7rem 1.3rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	text-align: center;
+	font-size: 0.9rem;
+}
+.card footer a {
+	margin: -0.7rem -1.3rem;
+	padding: 0.7rem 1.3rem;
+	display: block;
+	text-decoration: none;
+}
+.card footer a:hover,
+.card footer a:focus {
+	text-decoration: underline;
+}
+
+.categories {
+	margin-top: 2rem;
+}
+.categories h2 {
+	margin: 0 0 1rem 0;
+	font-size: 1rem;
+	font-weight: 800;
+}
+
+.categories .nav__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.categories .nav__item {
+}
+
+.categories .nav__link {
+	display: block;
+	padding: 0.5rem 0.5rem;
+	text-decoration: none;
+	border-radius: 0.3rem;
+	color: var(--black-333);
+}
+
+.categories .nav__link:hover,
+.categories .nav__link:focus {
+	background-color: rgba(0, 0, 0, 0.04);
+	color: var(--devto-brand-darker);
+}
+
+.categories .nav__link img {
+	margin-right: 0.6rem;
+}

@@ -1,0 +1,80 @@
+.card {
+	overflow: hidden;
+	margin-bottom: 1rem;
+	padding: 1.3rem;
+	background-color: var(--white);
+	border-radius: 0.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transition: 0.3s all;
+}
+
+.card:hover,
+.card:focus {
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.card .image__featured {
+	margin: -21px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.card .image__featured a {
+	display: block;
+}
+
+.card h2 a {
+	display: block;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--black);
+}
+.card h2 a:hover,
+.card h2 a:focus {
+	text-decoration: underline;
+	color: var(--devto-brand-darker);
+}
+
+.card .avatar {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.card .tags {
+	margin-top: 20px;
+}
+
+.card .tags a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: #777;
+}
+
+.card .tags a + a {
+	margin-left: 15px;
+}
+
+.card .tags a:hover,
+.card .tags a:focus {
+	color: #444;
+}
+
+.card .tags a span {
+	text-decoration: none;
+	color: #ccc;
+}
+
+.card .footer {
+	margin-top: 20px;
+	font-size: 0.9rem;
+	color: #444;
+}
+.card .footer a {
+	text-decoration: none;
+}
+.card .footer a:hover,
+.card .footer a:focus {
+	text-decoration: underline;
+}

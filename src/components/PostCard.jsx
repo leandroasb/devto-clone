@@ -44,7 +44,7 @@ export default function PostCard({
 					{tags && (
 						<div className={styles.tags}>
 							{tags.map((tag) => (
-								<a href={`https://dev.to/t/${tag}`} target="_blank">
+								<a key={tag} href={`https://dev.to/t/${tag}`} target="_blank">
 									<span>#</span> {tag}
 								</a>
 							))}
@@ -79,7 +79,7 @@ PostCard.propTypes = {
 	path: PropTypes.string,
 	date: PropTypes.string,
 	description: PropTypes.string,
-	user: PropTypes.array,
+	user: PropTypes.object,
 	tags: PropTypes.array,
 	reactionsCount: PropTypes.number,
 	commentsCount: PropTypes.number,

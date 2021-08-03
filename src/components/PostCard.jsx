@@ -8,6 +8,7 @@ export default function PostCard({
 	id,
 	image,
 	slug,
+	path,
 	date,
 	title,
 	description,
@@ -21,7 +22,7 @@ export default function PostCard({
 		<article className={styles.card}>
 			{image && (
 				<div className={styles.image__featured}>
-					<Link to={`/post/${slug}`}>
+					<Link to={`/post${path}`}>
 						<img src={image} className="img-fluid" alt={title} />
 					</Link>
 				</div>
@@ -29,11 +30,11 @@ export default function PostCard({
 
 			<div className="row">
 				<div className="col-2">
-					<img src={user.profile_image_90} className={styles.avatar} alt={user.name} />
+					<img src={user?.profile_image_90} className={styles.avatar} alt={user?.name} />
 				</div>
 
 				<div className="col-10 ps-4">
-					<div className={styles.author}>{user.name}</div>
+					<div className={styles.author}>{user?.name}</div>
 					<div className={styles.date}>{date}</div>
 					<h2 className={styles.title}>
 						<Link to={`/post/${slug}`}>{title}</Link>
@@ -75,6 +76,7 @@ PostCard.propTypes = {
 	id: PropTypes.number,
 	image: PropTypes.string,
 	slug: PropTypes.string,
+	path: PropTypes.string,
 	date: PropTypes.string,
 	description: PropTypes.string,
 	user: PropTypes.array,

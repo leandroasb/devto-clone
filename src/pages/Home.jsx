@@ -66,6 +66,7 @@ export default function Home() {
 							id={post.id}
 							image={post.cover_image}
 							slug={post.slug}
+							path={post.path}
 							date={post.readable_publish_date}
 							title={post.title}
 							description={post.description}

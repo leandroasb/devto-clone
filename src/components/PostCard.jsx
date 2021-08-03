@@ -49,11 +49,17 @@ export default function PostCard({
 							))}
 						</div>
 					)}
+				</div>
 
-					<div className={styles.footer}>
+				<div className={styles.footer}>
+					<div className="col-12 offset-lg-2 col-lg-10 ps-lg-4">
 						<div className="row d-flex justify-content-between">
-							<div className="col">{reactionsCount ? reactionsCount + ' reactions' : '0 reactions'} </div>
+							<div className="col">
+								<i className="far fa-heart me-2"></i>
+								{reactionsCount ? reactionsCount + ' reactions' : '0 reactions'}{' '}
+							</div>
 							<div className="col text-center">
+								<i className="far fa-comment fa-flip-horizontal me-2"></i>
 								{commentsCount ? commentsCount + ' comments' : '0 comments'}
 							</div>
 							<div className="col text-end">{readTime} min read</div>

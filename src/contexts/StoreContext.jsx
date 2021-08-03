@@ -7,6 +7,7 @@ export const StoreContext = React.createContext(null);
 
 export const StoreStorage = ({ children }) => {
 	const [posts, setPosts] = React.useState({});
+	const [post, setPost] = React.useState({});
 	const [loading, setLoading] = React.useState(true);
 	const [failed, setFailed] = React.useState(false);
 
@@ -29,12 +30,35 @@ export const StoreStorage = ({ children }) => {
 		}
 	};
 
-	return <StoreContext.Provider value={{ getPosts, posts, loading, failed }}>{children}</StoreContext.Provider>;
+	const getPost = async (slug) => {
+		try {
+			setFailed(false);
+			setPost({});
+			setLoading(true);
+
+			const req = await fetch(URL_API + '/articles/' + slug);
+			const res = await req.json();
+
+			setPost(res);
+		} catch (error) {
+			setFailed(true);
+		} finally {
+			setLoading(false);
+		}
+	};
+
+	return (
+		<StoreContext.Provider value={{ getPosts, getPost, posts, post, loading, failed }}>
+			{children}
+		</StoreContext.Provider>
+	);
 };
 
-StoreStorage.contextType = {
+StoreStorage.propTypes = {
 	getPosts: PropTypes.func,
+	getPost: PropTypes.func,
 	posts: PropTypes.object,
+	post: PropTypes.object,
 	loading: PropTypes.bool,
 	failed: PropTypes.bool,
 };

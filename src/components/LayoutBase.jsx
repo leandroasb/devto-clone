@@ -23,8 +23,10 @@ export default function LayoutBase({ isSidebar, children }) {
 					</div>
 				) : (
 					<div className="row">
-						<div className="col-9">{children}</div>
-						<div className="col-3"></div>
+						<div className="col-12 col-xl-9">{children}</div>
+						<div className="col-xl-3 d-none d-xl-block">
+							<SidebarRight />
+						</div>
 					</div>
 				)}
 			</div>

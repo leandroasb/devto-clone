@@ -41,7 +41,7 @@ export default function PostFull({
 						</div>
 					)}
 
-					<div className="p-3 px-md-5 py-md-4">
+					<div className="p-0 px-sm-3 px-md-5 py-md-4">
 						<div className="row d-flex align-items-center mb-4">
 							<div className="col-2">
 								<img src={user?.profile_image_90} className="img-fluid" alt={user?.name} />
@@ -67,11 +67,6 @@ export default function PostFull({
 						)}
 
 						<hr />
-
-						<div className="row">
-							<div className="col">{user?.name}</div>
-							<div className="col">{date}</div>
-						</div>
 
 						<div className={styles.content}>
 							<div dangerouslySetInnerHTML={{ __html: content }} />

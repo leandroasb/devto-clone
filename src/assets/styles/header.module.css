@@ -5,12 +5,24 @@
 }
 
 .menu__fixed {
+	z-index: 99;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 }
 
+.logo {
+	display: inline;
+}
+
 .logo svg {
 	max-width: 50px;
+}
+
+.menu__mobile .btn__menu {
+	padding: 0 0.7rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #555;
 }

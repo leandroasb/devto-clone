@@ -16,7 +16,7 @@ export default function App() {
 			<Router>
 				<Route exact path="/" render={() => <Home />} />
 				<Route exact path="/posts" render={() => <Posts />} />
-				<Route exact path="/post" render={() => <Post />} />
+				<Route exact path="/post/:slug/:slug" render={() => <Post />} />
 				<Route exact path="/login" render={() => <Login />} />
 				<Route exact path="/register" render={() => <Register />} />
 				{/* <Route path="*" render={() => <Error404 />} /> */}

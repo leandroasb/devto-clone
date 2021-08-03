@@ -60,23 +60,24 @@ export default function Home() {
 				<div className="alert alert-danger">An error occurred</div>
 			) : (
 				<>
-					{posts.map((post) => (
-						<PostCard
-							key={post.id}
-							id={post.id}
-							image={post.cover_image}
-							slug={post.slug}
-							path={post.path}
-							date={post.readable_publish_date}
-							title={post.title}
-							description={post.description}
-							tags={post.tag_list}
-							user={post.user}
-							reactionsCount={post.comments_count}
-							commentsCount={post.public_reactions_count}
-							readTime={post.reading_time_minutes}
-						/>
-					))}
+					{posts[0]?.id &&
+						posts.map((post) => (
+							<PostCard
+								key={post.id}
+								id={post.id}
+								image={post.cover_image}
+								slug={post.slug}
+								path={post.path}
+								date={post.readable_publish_date}
+								title={post.title}
+								description={post.description}
+								tags={post.tag_list}
+								user={post.user}
+								reactionsCount={post.comments_count}
+								commentsCount={post.public_reactions_count}
+								readTime={post.reading_time_minutes}
+							/>
+						))}
 				</>
 			)}
 		</LayoutBase>

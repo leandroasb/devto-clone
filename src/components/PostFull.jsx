@@ -20,7 +20,7 @@ export default function PostFull({
 }) {
 	return (
 		<div className="row">
-			<div className="col-1">
+			<div className="col-12 col-sm-1 d-none d-sm-block">
 				<ul className={styles.post__side}>
 					<li>
 						<i className="far fa-heart"></i>
@@ -33,7 +33,7 @@ export default function PostFull({
 				</ul>
 			</div>
 
-			<div className="col-11">
+			<div className="col-12 col-sm-11">
 				<article className={styles.post}>
 					{image && (
 						<div className={styles.image__featured}>

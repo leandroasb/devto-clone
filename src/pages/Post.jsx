@@ -15,8 +15,6 @@ export default function Post() {
 		getPost(location.pathname.replace('/post/', ''));
 	}, [location]);
 
-	console.log(post);
-
 	return (
 		<LayoutBase isSidebar={false}>
 			{loading ? (

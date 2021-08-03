@@ -10,8 +10,12 @@ export default function SidebarLeft() {
 			<SidebarCard>
 				<h2>DEV Community is a community of 670,881 amazing developers</h2>
 				<p>We're a place where coders share, stay up-to-date and grow their careers. </p>
-				<Link className="btn btn-primary w-100 font-bold mb-3">Create account</Link>
-				<Link className="btn btn-link w-100 font-bold">Log in</Link>
+				<Link to="/register" className="btn btn-primary w-100 font-bold mb-3">
+					Create account
+				</Link>
+				<Link to="/login" className="btn btn-link w-100 font-bold">
+					Log in
+				</Link>
 			</SidebarCard>
 
 			<SidebarNav />

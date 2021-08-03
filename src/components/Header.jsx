@@ -28,8 +28,12 @@ export default function Header() {
 					</div>
 
 					<div className="col-5 text-lg-end">
-						<Link className="btn btn-link font-bold me-2">Log in</Link>
-						<Link className="btn btn-primary font-bold">Create account</Link>
+						<Link to="/login" className="btn btn-link font-bold me-2">
+							Log in
+						</Link>
+						<Link to="/register" className="btn btn-primary font-bold">
+							Create account
+						</Link>
 					</div>
 				</div>
 			</div>
